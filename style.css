@@ -3,32 +3,34 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #d0ded8;
     font-family: 'DynaPuff', sans-serif;
     color: #57917c;
-    flex: 1;
+    flex-direction: column;
 }
 
 .container {
-    width: 30%;
-    height: 50%;
+    width: 90%;
+    max-width: 500px;
+    min-height: 60vh;
     background-color: #eef9f5;
     border-radius: 25px;
     padding: 50px;
     position: relative;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.9);
+    box-sizing: border-box;
 }
 
 .container h1 {
     margin-bottom: 25px;
     transition: transform 0.6s ease;
     text-align: center;
+    font-size: 2rem;
 }
-
 
 .container h1:hover {
     transform: scale(1.2);
@@ -39,24 +41,39 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    width: 100%;
 }
 
 input {
     height: 50px;
     font-family: 'DynaPuff';
-    width: 90%;
-    padding: 5px;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }
 
 button {
     font-family: 'DynaPuff';
     color: #d0ded8;
     background-color: #57917c;
-    width: 90%;
+    width: 100%;
+    max-width: 400px;
     height: 50px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
-.input:active {
+button:hover {
+    background-color: #40735f;
+}
+
+input:active {
     border: 2px solid red;
 }
 
@@ -71,4 +88,35 @@ span {
 
 span:hover {
     transform: scale(1.2);
+}
+
+/* 📱 Mobile screens */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 25px;
+        border-radius: 20px;
+    }
+
+    .container h1 {
+        font-size: 1.5rem;
+    }
+
+    input,
+    button {
+        height: 45px;
+        font-size: 0.95rem;
+    }
+}
+
+/* 💻 Tablet screens */
+@media screen and (max-width: 900px) {
+    .container {
+        width: 85%;
+        padding: 30px;
+    }
+
+    input,
+    button {
+        width: 100%;
+    }
 }
