@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=DynaPuff:wght@400..700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d0ded8;
+    font-family: 'DynaPuff', sans-serif;
+    color: #57917c;
+    flex: 1;
+}
+
+.container {
+    width: 30%;
+    height: 50%;
+    background-color: #eef9f5;
+    border-radius: 25px;
+    padding: 50px;
+    position: relative;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.container h1 {
+    margin-bottom: 25px;
+    transition: transform 0.6s ease;
+    text-align: center;
+}
+
+
+.container h1:hover {
+    transform: scale(1.2);
+}
+
+.input-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+input {
+    height: 50px;
+    font-family: 'DynaPuff';
+    width: 90%;
+    padding: 5px;
+}
+
+button {
+    font-family: 'DynaPuff';
+    color: #d0ded8;
+    background-color: #57917c;
+    width: 90%;
+    height: 50px;
+}
+
+.input:active {
+    border: 2px solid red;
+}
+
+span {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    font-size: smaller;
+    cursor: pointer;
+    transition: transform 0.3s ease-out;
+}
+
+span:hover {
+    transform: scale(1.2);
+}
